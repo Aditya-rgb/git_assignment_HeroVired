@@ -1,6 +1,7 @@
 # git_assignment_HeroVired_2
 
-Assignment question 1
+# Assignment question 1 - You are part of a development team working on a Python application called "CalculatorPlus." The application provides basic arithmetic operations, such as addition, subtraction, multiplication, and division. Your task is to implement a new feature that adds support for calculating the square root of a number.
+
 1. Created a repository named "git_assignment_HeroVired" from the github UI. Made it in "private" mode and added a README.md file.
 2. Went to my local and opened git bash. Gave the command "git clone git@github.com:Aditya-rgb/git_assignment_HeroVired.git"
 3. To make the "dev" branch gave the command "git checkout -b dev"
@@ -64,7 +65,10 @@ Assignment question 1
                      git push
 13. Adding the release version 2!!
 
-# Assignment question 3
+    
+
+# Assignment question 3 -  In this same GitHub repository, create a new branch ‘geometry-calculator’, we'll work on a simple Python program that calculates the area of a circle and the area of a rectangle. We'll use Git stash to switch between working on multiple features (calculating circle area and calculating rectangle area) without committing incomplete changes.
+
 1. Created a branch geometry-calculator by:
    git checkout -b geometry-calculator (from main)
 2. Pasted the inital code in the new repo and pushed it to remote :
@@ -77,16 +81,19 @@ Assignment question 1
    code . # Implemented the circle area code in the code in VScode
    git status
    git stash save "WIP : Stashing the changes made in feature/circle-area" #saving the stash with a message
+   git status #this shows "nothing to commit" which indicates working directory is clean.
 
-4. Came back to geometry-calculator and created the brnach feature/rectangle-area
+5. Came back to geometry-calculator and created the brnach feature/rectangle-area
    git checkout geometry-calculator
    git status
    git checkout -b feature/rectangle-area #Creating new branch
    code .
    git stash save "WIP : Stashing the changes made in feature/rectangle-area" Stashing the changes made in 
    feature/rectangle-area" #saving the stash with a message
+   git status #this shows "nothing to commit" which indicates working directory is clean.
 
-5. According to the question, now will go back to feature/circle-area and push the code to git
+
+7. According to the question, now will go back to feature/circle-area and push the code to git
    git checkout feature/circle-area
    ls -lrt
    git status #shows nothing to commit as we stashed away everything
@@ -98,7 +105,7 @@ Assignment question 1
    git commit -m "Un-stashed and completed the circle area code and pushing it remote now."
    git push -u origin feature/circle-area  #pushing to remote and setting the branch as upstream
 
-6. Now doing the same with feature/rectangle-area branch
+8. Now doing the same with feature/rectangle-area branch
    git checkout feature/rectangle-area
    git status
    git stash apply stash@{0}
@@ -108,6 +115,7 @@ Assignment question 1
    git push -u origin feature/rectangle-area
 
 Next steps involved creating 2 pull requests
+I have created two pull requests into the geometry-calcualtor instead of dev and tested it there, then from geometry-calculator into main.
 First, geometry-calculator <- feature/circle-area, and getting it reviewed by shubham Rajak
 Second, geometry-calculator <- feature/rectangle-area, and getting it reviewed by shubham Rajak again
 Now the geomtery-calculator branch has the whole code with both circle area and rectangle code snippets.
