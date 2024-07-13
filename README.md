@@ -97,12 +97,19 @@
 #Clones the repo in a separate machine and put in the following commands:
 
   509  git clone git@github.com:Aditya-rgb/git_assignment_HeroVired.git  # Cloning my repo into another location
+  
   510  ls -lrt
+  
   511  cd git_assignment_HeroVired/
+  
   512  ls -lrt
+  
   513  git checkout LFS
+  
   514  ls -lrta
+  
   total 292989
+  
   drwxr-xr-x 1 KIIT 197121         0 Jul 13 16:43 ../
   -rw-r--r-- 1 KIIT 197121       853 Jul 13 16:43 CalculatorPlus.py
   -rw-r--r-- 1 KIIT 197121        43 Jul 13 16:44 .gitattributes
