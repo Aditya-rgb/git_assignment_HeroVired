@@ -60,7 +60,7 @@
    
    git push
 
- 9.Now making sure the fix made in dev reflects in my feature branch so for that did the following :
+9. Now making sure the fix made in dev reflects in my feature branch so for that did the following :
  
    git checkout feature/sqrt
    
