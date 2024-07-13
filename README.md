@@ -94,7 +94,7 @@
    git push -u origin LFS # Pushing the large file to remote GIT branch LFS
 
 
-#Clones the repo in a separate machine and put in the following commands:
+   #Clones the repo in a separate machine and put in the following commands:
 
    git clone git@github.com:Aditya-rgb/git_assignment_HeroVired.git  # Cloning my repo into another location
   
