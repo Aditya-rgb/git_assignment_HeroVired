@@ -75,7 +75,7 @@
 
 2.Downloaded into the local machine and put it in main branch
 
-3. Following GIT commands were executed in git bash :
+3.Following GIT commands were executed in git bash :
    
    git checkout -b LFS # Creating a new branch LFS from MAIN branch
    
@@ -112,20 +112,20 @@
   
    drwxr-xr-x 1 KIIT 197121         0 Jul 13 16:43 ../
    
-  -rw-r--r-- 1 KIIT 197121       853 Jul 13 16:43 CalculatorPlus.py
+   -rw-r--r-- 1 KIIT 197121       853 Jul 13 16:43 CalculatorPlus.py
   
-  -rw-r--r-- 1 KIIT 197121        43 Jul 13 16:44 .gitattributes
+   -rw-r--r-- 1 KIIT 197121        43 Jul 13 16:44 .gitattributes
   
-  -rw-r--r-- 1 KIIT 197121      3294 Jul 13 16:44 README.md
+   -rw-r--r-- 1 KIIT 197121      3294 Jul 13 16:44 README.md
   
    drwxr-xr-x 1 KIIT 197121         0 Jul 13 16:45 ./
    
-  -rw-r--r-- 1 KIIT 197121 300000000 Jul 13 16:45 300MB.bin              # .bin file pulled from remote branch
+   -rw-r--r-- 1 KIIT 197121 300000000 Jul 13 16:45 300MB.bin              # .bin file pulled from remote branch
   
    drwxr-xr-x 1 KIIT 197121         0 Jul 13 16:45 .git/
    
 
-  515  history
+   515  history
 
 
 # Assignment question 3 -  In this same GitHub repository, create a new branch ‘geometry-calculator’, we'll work on a simple Python program that calculates the area of a circle and the area of a rectangle. We'll use Git stash to switch between working on multiple features (calculating circle area and calculating rectangle area) without committing incomplete changes.
