@@ -72,7 +72,9 @@
 # In the repository ‘git_assignment_HeroVired’, create a branch ‘lfs’. Upload any large file whose size is over ‘200mb’ and try to push this file into the repository.
 
 1.Created a random .bin file of size 300MB.
+
 2.Downloaded into the local machine and put it in main branch
+
 3. Following GIT commands were executed in git bash : 
    git checkout -b LFS # Creating a new branch LFS from MAIN branch
    ls -lrt
@@ -84,7 +86,8 @@
    git push -u origin LFS # Pushing the large file to remote GIT branch LFS
 
 
-#Clones the repo in a separate machine and put in the following commands
+#Clones the repo in a separate machine and put in the following commands:
+
   509  git clone git@github.com:Aditya-rgb/git_assignment_HeroVired.git  # Cloning my repo into another location
   510  ls -lrt
   511  cd git_assignment_HeroVired/
