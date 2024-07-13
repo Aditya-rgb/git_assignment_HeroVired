@@ -75,14 +75,22 @@
 
 2.Downloaded into the local machine and put it in main branch
 
-3. Following GIT commands were executed in git bash : 
+3. Following GIT commands were executed in git bash :
+   
    git checkout -b LFS # Creating a new branch LFS from MAIN branch
+   
    ls -lrt
+   
    ls -lrta
+   
    git lfs track "*.bin" # Tracking Large Files: Identifing the large files in the LFS branch that needs to be managed by Git LFS.
+   
    git status
+   
    git add .
+   
    git commit -m "Pushing 300mb bin file to remote"
+   
    git push -u origin LFS # Pushing the large file to remote GIT branch LFS
 
 
