@@ -1,269 +1,234 @@
-# git_assignment_HeroVired_2
+# git_assignment_HeroVired - 1
 
-# Assignment question 1 - You are part of a development team working on a Python application called "CalculatorPlus." The application provides basic arithmetic operations, such as addition, subtraction, multiplication, and division. Your task is to implement a new feature that adds support for calculating the square root of a number.
+## Assignment Overview 
+You are part of a development team working on a Python application called "CalculatorPlus." The application provides basic arithmetic operations, such as addition, subtraction, multiplication, and division. Your task is to implement a new feature that adds support for calculating the square root of a number.
 
-1. Created a repository named "git_assignment_HeroVired" from the github UI. Made it in "private" mode and added a README.md file.
-   
-2. Went to my local and opened git bash. Gave the command "git clone git@github.com:Aditya-rgb/git_assignment_HeroVired.git"
-   
-3. To make the "dev" branch gave the command "git checkout -b dev"
-   
-   From git bash terminal, "vi CalculatorPlus.py", pasted the code from VLearn platoform.
-   
-   Alternatley opened VScode from git bash terminal using the command "code ."
-   
-4. Saved the code in the local dev branch.
-   
-   Then in git bash gave the following commands :
-   
-   git add .
-   
-   git commit -m "Pushing the initial code from local dev to remote dev"
-   
-   git push -u origin dev #setting the dev branch as upstream so that next time when i push anything i wont have to explicitly mention 
-   anything in my commands.
+## Steps Taken
 
-5. Went to local main branch and did "git merge dev"
-    
-   Before pushing anything from local main to remote main did this :
-   
-   git pull origin main #pulled the updates for the readme file which i am writing
-   
-   git merge dev
-   
-   git push #pushed the Version 1 release of the code.
+1. **Repository Creation**: 
+   - Created a repository named "git_assignment_HeroVired" from the GitHub UI in "private" mode and added a README.md file.
 
-6. Added Manish Panda as one of my colloaborators.
-    
-7. Added a feature branch feature/sqrt form the dev branch with the command "git checkout -b feature/sqrt".
-    
-   Added the square root function in the code in local and did the following commands.
-   
-   git add .
-   
-   git commit -m "Added the square root functionality to the code in feature branch."
-   
-   git push -u origin feature/sqrt #setting the feature/sqrt branch as upstream so that next time when i push anything i wont have to 
-   explicitly mention anything in my commands.
+2. **Cloning the Repository**: 
+   - Opened Git Bash and cloned the repository:
+     ```bash
+     git clone git@github.com:Aditya-rgb/git_assignment_HeroVired.git
+     ```
 
-8. Found a bug in the dev branch so to fix it did the following commands :
-    
-   git checkout dev
-   
-   code .
-   
-   #made the fix
-   
-   git add .
-   
-   git commit -m "Fixed the divide bug in Dev local and now pushing to dev remote."
-   
-   git push
+3. **Creating a Development Branch**: 
+   - Created the "dev" branch:
+     ```bash
+     git checkout -b dev
+     ```
 
-9. Now making sure the fix made in dev reflects in my feature branch so for that did the following :
- 
-   git checkout feature/sqrt
-   
-   git merge dev 
-   
-   git push
-   
-10 .Opened Github UI
+4. **Adding Initial Code**: 
+   - Opened the code file:
+     ```bash
+     vi CalculatorPlus.py
+     ```
+   - Pasted the initial code and saved it.
 
-    clicked on pull request
-    
-    new pull request ( main <- dev)
-    
-    created the request
-    
-    clicked on Assigness on the right and added manish panda
-    
-    Manish went to my repo, went to pull requests in his UI
-    
-    clicked on my pull request which was reflecting there
-    
-    clicked on files changed
-    
-    reviewed my code and have the appropriate comments and then clicked on Approve.
-    
-    I came to my pull request then and did the merge, closed my request
-    
-    Remote main brnach finally reflected the code as same as dev
+5. **Committing Changes**: 
+   - Added and committed the code:
+     ```bash
+     git add .
+     git commit -m "Pushing the initial code from local dev to remote dev"
+     git push -u origin dev
+     ```
 
-11. Now to merge the changes from feature/sqrt to dev
-    
-     git checkout dev
-    
-     git pull origin dev # good practice
-    
-     git merge feature/sqrt
-    
+6. **Merging Changes**: 
+   - Merged changes from the "dev" branch to the "main" branch:
+     ```bash
+     git checkout main
+     git pull origin main
+     git merge dev
      git push
-    
-     # Now the square root functionality reflects in local dev and remote dev too.
+     ```
 
-13. Did the testing in dev in VS code, code runs good. Now as part of the question merging the latest changes intorducted in dev (square root functionality) to main, then did this: git checkout main
-    
-    git pull origin main #good practice
-    
-    git merge dev
-    
-    git push
-    
-16. Adding the release version 2!!
+7. **Collaboration**: 
+   - Added Manish Panda as a collaborator.
 
-# git_assignment_HeroVired_2
+8. **Adding a Feature Branch**: 
+   - Created a feature branch for square root functionality:
+     ```bash
+     git checkout -b feature/sqrt
+     ```
+   - Added the square root function and committed:
+     ```bash
+     git add .
+     git commit -m "Added the square root functionality to the code in feature branch."
+     git push -u origin feature/sqrt
+     ```
 
-# Assignment question 2 - For a project that deals with large binary files, integrate Git LFS (Large File Storage) to handle these files efficiently. Demonstrate how to add, commit, and push binary files to the repository, ensuring they are tracked by Git LFS correctly. Clone the repository on another machine to verify that the binary files are downloaded correctly.
+9. **Bug Fixing**: 
+   - Fixed a bug in the "dev" branch:
+     ```bash
+     git checkout dev
+     code .
+     # made the fix
+     git add .
+     git commit -m "Fixed the divide bug in Dev local and now pushing to dev remote."
+     git push
+     ```
 
-# In the repository ‘git_assignment_HeroVired’, create a branch ‘lfs’. Upload any large file whose size is over ‘200mb’ and try to push this file into the repository.
+10. **Ensuring Feature Branch Update**: 
+    - Merged fixes from "dev" into the "feature/sqrt" branch:
+      ```bash
+      git checkout feature/sqrt
+      git merge dev
+      git push
+      ```
 
-1.Created a random .bin file of size 300MB.
+11. **Pull Request Process**: 
+    - Created a pull request from "main" to "dev" and added reviewers.
+    - Merged approved pull requests.
 
-2.Downloaded into the local machine and put it in main branch
+12. **Final Testing**: 
+    - Tested the application in the "dev" branch, ensured functionality was intact, and merged changes to "main":
+      ```bash
+      git checkout main
+      git pull origin main
+      git merge dev
+      git push
+      ```
 
-3.Following GIT commands were executed in git bash :
-   
-   git checkout -b LFS # Creating a new branch LFS from MAIN branch
-   
-   ls -lrt
-   
-   ls -lrta
-   
-   git lfs track "*.bin" # Tracking Large Files: Identifing the large files in the LFS branch that needs to be managed by Git LFS.
-   
-   git status
-   
-   git add .
-   
-   git commit -m "Pushing 300mb bin file to remote"
-   
-   git push -u origin LFS # Pushing the large file to remote GIT branch LFS
+## Versioning
+- Added release version 2.
 
+# git_assignment_HeroVired - 2
 
-   #Clones the repo in a separate machine and put in the following commands:
+## Assignment Overview
+For a project dealing with large binary files, integrate Git LFS (Large File Storage) to handle these files efficiently. This project demonstrates how to add, commit, and push binary files to the repository, ensuring they are tracked correctly by Git LFS. Additionally, it verifies that the binary files are downloaded correctly when cloned on another machine.
 
-   git clone git@github.com:Aditya-rgb/git_assignment_HeroVired.git  # Cloning my repo into another location
-  
-   ls -lrt
-  
-   cd git_assignment_HeroVired/
-  
-   ls -lrt
-  
-   git checkout LFS
-  
-   ls -lrta
-  
-   total 292989
-  
-   drwxr-xr-x 1 KIIT 197121         0 Jul 13 16:43 ../
-   
-   -rw-r--r-- 1 KIIT 197121       853 Jul 13 16:43 CalculatorPlus.py
-  
-   -rw-r--r-- 1 KIIT 197121        43 Jul 13 16:44 .gitattributes
-  
-   -rw-r--r-- 1 KIIT 197121      3294 Jul 13 16:44 README.md
-  
-   drwxr-xr-x 1 KIIT 197121         0 Jul 13 16:45 ./
-   
-   -rw-r--r-- 1 KIIT 197121 300000000 Jul 13 16:45 300MB.bin              # .bin file pulled from remote branch
-  
-   drwxr-xr-x 1 KIIT 197121         0 Jul 13 16:45 .git/
-   
+## Steps Taken
 
-   515  history
+1. **File Creation**: 
+   - Created a random `.bin` file of size 300MB.
 
+2. **Branch Creation**: 
+   - Switched to the main branch and created a new branch `lfs`:
+     ```bash
+     git checkout -b LFS
+     ```
 
-# Assignment question 3 -  In this same GitHub repository, create a new branch ‘geometry-calculator’, we'll work on a simple Python program that calculates the area of a circle and the area of a rectangle. We'll use Git stash to switch between working on multiple features (calculating circle area and calculating rectangle area) without committing incomplete changes.
+3. **Tracking Large Files**: 
+   - Executed the following commands to track the `.bin` files:
+     ```bash
+     git lfs track "*.bin" # Tracking large files with Git LFS
+     git status
+     ```
 
-1. Created a branch geometry-calculator by:
-   
-   git checkout -b geometry-calculator (from main)
-   
-3. Pasted the inital code in the new repo and pushed it to remote :
-   
-   code . (Opened VS code and created a python file "GeometryCalculator.py" and pasted the inital draft)
-   
-   git add .
-   
-   git commit -m "WIP : Pushing the inital code to the remote from geometry-calculator local repo"
-   
-   git push -u origin geometry-calculator #setting the geometry-calculator branch as upstream so that next
-   
-   time when i push anything i wont have to explicitly mention anything in my commands.
-   
-5. Created the feature branch "feature/circle-area from branch geometry-calculator
-   
-   code . # Implemented the circle area code in the code in VScode
-   
-   git status
-   
-   git stash save "WIP : Stashing the changes made in feature/circle-area" #saving the stash with a message
-   
-   git status #this shows "nothing to commit" which indicates working directory is clean.
+4. **Adding and Committing**: 
+   - Added and committed the large file:
+     ```bash
+     git add .
+     git commit -m "Pushing 300MB bin file to remote"
+     git push -u origin LFS
+     ```
 
-7. Came back to geometry-calculator and created the brnach feature/rectangle-area
-   
-   git checkout geometry-calculator
-   
-   git status
-   
-   git checkout -b feature/rectangle-area #Creating new branch
-   
-   code .
-   
-   git stash save "WIP : Stashing the changes made in feature/rectangle-area" #saving the stash with a message
-   
-   git status #this shows "nothing to commit" which indicates working directory is clean and git stash is working.
+5. **Cloning the Repository**: 
+   - Cloned the repository on another machine to verify that the binary file is correctly downloaded:
+     ```bash
+     git clone git@github.com:Aditya-rgb/git_assignment_HeroVired.git
+     ```
 
+6. **Verifying Files**: 
+   - Navigated to the cloned repository and checked the files:
+     ```bash
+     cd git_assignment_HeroVired/
+     git checkout LFS
+     ls -lrta
+     ```
 
-9. According to the question, now will go back to feature/circle-area and push the code to git
-    
-   git checkout feature/circle-area
-   
-   ls -lrt
-   
-   git status #shows nothing to commit as we stashed away everything
-   
-   git stash list #to unstash the correct stash belonging to this branch because git stash is universal across whole repository
-   
-   git stash apply stash@{1} # un stashing the changes which was made only in the circle-area branch
-   
-   code .
-   
-   git add .
-   
-   git commit -m "Un-stashed and completed the circle area code and pushing it remote now."
-   
-   git push -u origin feature/circle-area  #pushing to remote and setting the branch as upstream
+   - Confirmed that the 300MB binary file was pulled correctly:
+     ```
+     -rw-r--r-- 1 KIIT 197121 300000000 Jul 13 16:45 300MB.bin
+     ```
 
-11. Now doing the same with feature/rectangle-area branch
-    
-    git checkout feature/rectangle-area
-    
-    git status
-    
-    git stash apply stash@{0}
-    
-    code .
-    
-    git add .
-    
-    git commit -m "Un-stashed and completed the rectangle area code and pushing it remote now."
-    
-    git push -u origin feature/rectangle-area
+## Conclusion
+Successfully integrated Git LFS to manage large binary files within the project. The process included creating a large binary file, tracking it with Git LFS, and verifying successful download on another machine.
 
-Next steps involved creating 2 pull requests
+# git_assignment_HeroVired - 3
 
-I have created two pull requests into the geometry-calcualtor instead of dev and tested it there, then from geometry-calculator into main.
+## Assignment Overview
+In this assignment, we will create a new branch ‘geometry-calculator’ in the existing GitHub repository to develop a simple Python program that calculates the area of a circle and the area of a rectangle. We will use Git stash to switch between working on these features without committing incomplete changes.
 
-First, geometry-calculator <- feature/circle-area, and getting it reviewed by shubham Rajak
+## Steps Taken
 
-Second, geometry-calculator <- feature/rectangle-area, and getting it reviewed by shubham Rajak again
+1. **Branch Creation**:
+   - Created a branch `geometry-calculator` from the main branch:
+     ```bash
+     git checkout -b geometry-calculator
+     ```
 
-Now the geomtery-calculator branch has the whole code with both circle area and rectangle code snippets.
+2. **Initial Code Push**:
+   - Opened VS Code and created a Python file `GeometryCalculator.py` with the initial draft of the code.
+   - Added and committed the initial code to the remote `geometry-calculator` branch:
+     ```bash
+     code .
+     git add .
+     git commit -m "WIP: Pushing the initial code to the remote from geometry-calculator local repo"
+     git push -u origin geometry-calculator
+     ```
 
-Finalt step, creating a pull request again for main branch
+3. **Feature Branch for Circle Area**:
+   - Created a feature branch `feature/circle-area` from `geometry-calculator`:
+     ```bash
+     git checkout -b feature/circle-area
+     code . # Implemented the circle area code in VS Code
+     git status
+     git stash save "WIP: Stashing the changes made in feature/circle-area" # Saving the stash with a message
+     git status # Shows "nothing to commit" indicating the working directory is clean
+     ```
 
-main <- geometry-calcultor, and getting it reviewed
+4. **Feature Branch for Rectangle Area**:
+   - Switched back to `geometry-calculator` and created the branch `feature/rectangle-area`:
+     ```bash
+     git checkout geometry-calculator
+     git status
+     git checkout -b feature/rectangle-area
+     code . # Implemented the rectangle area code in VS Code
+     git stash save "WIP: Stashing the changes made in feature/rectangle-area" # Saving the stash with a message
+     git status # Shows "nothing to commit" indicating the working directory is clean
+     ```
+
+5. **Unstash and Push Circle Area Code**:
+   - Switched back to `feature/circle-area` and unstashed the changes:
+     ```bash
+     git checkout feature/circle-area
+     git status # Shows nothing to commit as we stashed everything
+     git stash list # To list all stashes
+     git stash apply stash@{1} # Unstashing the changes made in circle-area branch
+     code .
+     git add .
+     git commit -m "Un-stashed and completed the circle area code and pushing it remote now."
+     git push -u origin feature/circle-area
+     ```
+
+6. **Unstash and Push Rectangle Area Code**:
+   - Switched to `feature/rectangle-area` and unstashed the changes:
+     ```bash
+     git checkout feature/rectangle-area
+     git status
+     git stash apply stash@{0} # Unstashing the changes made in rectangle-area branch
+     code .
+     git add .
+     git commit -m "Un-stashed and completed the rectangle area code and pushing it remote now."
+     git push -u origin feature/rectangle-area
+     ```
+
+7. **Creating Pull Requests**:
+   - Created two pull requests into the `geometry-calculator` branch for testing:
+     1. `geometry-calculator <- feature/circle-area`, reviewed by Shubham Rajak
+     2. `geometry-calculator <- feature/rectangle-area`, reviewed by Shubham Rajak
+
+   - The `geometry-calculator` branch now contains the complete code for both circle area and rectangle area calculations.
+
+8. **Final Pull Request to Main**:
+   - Created a pull request to merge `geometry-calculator` into `main`:
+     ```bash
+     main <- geometry-calculator, reviewed and merged.
+     ```
+
+## Conclusion
+Successfully implemented the calculation of the area of a circle and rectangle in the Python program using Git stash for switching between features. The code was reviewed, tested, and merged into the main branch.
+
